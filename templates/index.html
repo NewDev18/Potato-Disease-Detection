@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Disease Classification</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/images/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        #logo h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        #logo a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .main-banner {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 100px 0;
+            margin-top: 60px;
+        }
+        .style-banner h4 {
+            font-size: 2.5em;
+            color: #4CAF50;
+        }
+        .style-banner h5 {
+            font-size: 1.5em;
+            color: #333;
+        }
+        .two-demo-button {
+            font-size: 1.1em;
+            color: #666;
+        }
+        #about, #features, #test {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 50px 0;
+            margin-top: 20px;
+        }
+        .title {
+            font-size: 2em;
+            color: #4CAF50;
+            margin-bottom: 30px;
+        }
+        .about-imgs-txt img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .service-grid-wthree {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .about-icon {
+            font-size: 2em;
+            color: #4CAF50;
+        }
+        #file-upload {
+            display: none;
+        }
+        .upload-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+        }
+        .upload-btn:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: rgba(173, 216, 230, 1);">
+        <div class="container">
+            <div id="logo">
+                <h1><a href="index.html">Plant-AI</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#test">Detect</a></li>
+                    <li><a href="#weather">Weather</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="main-banner text-center">
+        <div class="container">
+            <div class="style-banner">
+                <h4 class="mb-2">Welcome To Potato Disease Classification</h4>
+                <h5>Offering Farming Solutions Worldwide</h5>
+            </div>
+            <div class="two-demo-button mt-md-4 mt-3">
+                Developing models for making disease detection easy and providing solutions for improving crop production
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="title text-center">About</h2>
+            <div class="row">
+                <div class="col-lg-6 about-imgs-txt pt-3">
+                    <img src="../static/images/4.jpg" alt="About Image" class="img-fluid">
+                </div>
+                <div class="col-lg-6 text-justify about-two-grids pt-3">
+                    <p class="about-para-txt">
+                        Food security for billions of people on earth requires minimizing crop damage by timely detection of diseases. Developing methods for detection of plant diseases serves the dual purpose of increasing crop yield and reducing pesticide use without knowing about the proper disease. Along with development of better crop varieties, disease detection is thus paramount goal for achieving food security. The traditional method of disease detection has been to use manual examination by either farmers or experts, which can be time consuming and costly, proving infeasible for millions of small and medium sized farms around the world.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2 class="title text-center mb-3">Features</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 mt-lg-4 mt-3 service-grid-wthree text-center">
+                    <div class="ser-Agriculture-grid">
+                        <div class="about-icon mb-md-4 mb-3">
+                            <i class="fa fa-leaf"></i>
+                        </div>
+                        <div class="ser-sevice-grid">
+                            <h4 class="pb-3">Easy Detection</h4>
+                            <p>Just need to click and upload leaf image.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 mt-lg-4 mt-3 service-grid-wthree text-center">
+                    <div class="ser-Agriculture-grid">
+                        <div class="about-icon mb-md-4 mb-3">
+                            <i class="fa fa-pagelines"></i>
+                        </div>
+                        <div class="ser-sevice-grid">
+                            <h4 class="pb-3">Cause and Solution</h4>
+                            <p>Provides the cause and solution of the identified diseases.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section  id="test" style="padding: 60px 0;">
+    <div  style="background-color: rgba(255, 255, 255, 0.85); border: 1px solid #ddd; padding: 20px; margin-top: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: none; text-align: center;">
+        <h3  style="font-size: 30px; color: #47b053; letter-spacing: 2px; font-weight: 700; text-transform: uppercase; text-align: center;">Test Your Plant</h3>
+        <div class="row" style="justify-content: center;">
+            <form action="{{ url_for('predict') }}" method="POST" enctype="multipart/form-data">
+                <div class="form-group text-center">
+                    <label for="exampleFormControlFile1" style="font-size: 16px; color: #4c4c4c;"><b>Input a file</b></label>
+                    <input type="file" name="file" class="form-control-file" id="inputImage" onchange="previewImage(event)" required style="margin: 10px 0; padding: 10px; font-size: 16px;" />
+                    <br />
+                    <button class="btn btn-primary" type="submit" style="margin: 10px 0; padding: 10px; font-size: 16px;">Predict</button>
+                </div>
+            </form>
+        </div>
+        <img id="output-image" class="rounded mx-auto d-block" style="margin-top: 20px;" />
+        <br />
+    </div>
+</section>
+
+
+<section id="weather" style="padding: 60px 0;">
+    <div class="container weather-container" style="background-color: rgba(255, 255, 255, 0.85); border: 1px solid #ddd; padding: 20px; margin-top: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: none;">
+        <h2 class="title text-center mb-3" style="font-size: 30px; color: #47b053; letter-spacing: 2px; font-weight: 700; text-transform: uppercase; text-align: center;">Weather and Farming Tips</h2>
+        <div class="weather-info text-center" style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <input type="text" id="city-input" placeholder="Enter city name" style="margin: 10px 0; padding: 10px; font-size: 16px;" />
+            <button id="get-weather-btn" style="margin: 10px 0; padding: 10px; font-size: 16px;">Get Weather</button>
+            <p style="font-size: 16px; color: #4c4c4c; line-height: 25px;"><strong>Current Weather:</strong> <span id="weather-description"></span></p>
+            <p style="font-size: 16px; color: #4c4c4c; line-height: 25px;"><strong>Temperature:</strong> <span id="temperature"></span> °C</p>
+            <p style="font-size: 16px; color: #4c4c4c; line-height: 25px;"><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+            <h4 style="font-size: 25px; color: #47b053; font-weight: bold; margin-top: 20px;">Farming Tips for Potato:</h4>
+            <p id="farming-tips" style="font-size: 16px; color: #4c4c4c; line-height: 25px;"></p>
+        </div>
+    </div>
+</section>
+
+
+
+    <footer>
+        <div class="container">
+            <p>Designed by Rabin Lamichhane and Himal Paudyal</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('predict-btn').addEventListener('click', async () => {
+            const fileInput = document.getElementById('file-upload');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please upload an image first.');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch('http://localhost:8000/predict', {  // Ensure this URL matches your FastAPI URL
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const result = await response.text();  // Since we are returning HTML from FastAPI
+                    document.open();
+                    document.write(result);  // Replace the content of the page with the returned HTML
+                    document.close();
+                } else {
+                    alert('Prediction failed. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while making the prediction.');
+            }
+        });
+    </script>
+<script>
+        const apiKey = "0c15fbe72e733c93a5e708b07f38b26f";
+
+        document.getElementById('get-weather-btn').addEventListener('click', () => {
+            const city = document.getElementById('city-input').value;
+            if (city) {
+                getWeatherData(city);
+            } else {
+                alert('Please enter a city name.');
+            }
+        });
+
+        function getWeatherData(city) {
+            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const weatherDescription = data.weather[0].description;
+                    const temperature = data.main.temp;
+                    const humidity = data.main.humidity;
+
+                    document.getElementById('weather-description').textContent = weatherDescription;
+                    document.getElementById('temperature').textContent = temperature;
+                    document.getElementById('humidity').textContent = humidity;
+
+                    provideFarmingTips(temperature, humidity, weatherDescription);
+                })
+                .catch(error => console.error('Error fetching weather data:', error));
+        }
+
+        function provideFarmingTips(temperature, humidity, weatherDescription) {
+            let tips = "";
+
+            if (temperature < 10) {
+                tips += "The weather is too cold for potato growth. Consider covering the plants to protect them from frost.";
+            } else if (temperature > 30) {
+                tips += "High temperatures can affect potato tuber formation. Consider providing shade or increasing irrigation.";
+            } else {
+                tips += "The temperature is optimal for potato growth. Keep monitoring the soil moisture and irrigate as needed.";
+            }
+
+            if (humidity > 80) {
+                tips += " High humidity increases the risk of fungal diseases like late blight. Use appropriate fungicides.";
+            } else if (humidity < 30) {
+                tips += " Low humidity can cause dehydration in plants. Ensure the soil remains moist.";
+            }
+
+            if (weatherDescription.includes("moderate rain")) {
+                      tips += " Moderate rain can lead to waterlogging. Ensure proper drainage to avoid root rot.";
+            } else if (weatherDescription.includes("slight rain")) {
+                      tips += " Slight rain is beneficial but monitor soil moisture to avoid overwatering.";
+            } else if (weatherDescription.includes("rain")) {
+                      tips += " Rainy weather can lead to waterlogging. Ensure proper drainage to avoid root rot.";
+            } else if (weatherDescription.includes("clear")) {
+                      tips += " Clear skies are ideal for potato growth. Ensure proper irrigation during dry periods.";
+            }
+
+
+            document.getElementById('farming-tips').textContent = tips;
+        }
+    </script>
+</body>
+</html>
